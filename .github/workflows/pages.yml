@@ -65,7 +65,7 @@ jobs:
           from pathlib import Path
           base=os.environ['GAME_URL'].rstrip('/')+'/'
           checked={}
-          for path in ('index.html','play/index.html','play/game.wasm','play/assets.json'):
+          for path in ('index.html','play/index.html','play/game.wasm','play/assets.json','social-preview-v2.3.jpg'):
               with urllib.request.urlopen(base+path,timeout=60) as r:
                   data=r.read();assert r.status==200
               assert hashlib.sha256(data).hexdigest()==hashlib.sha256(Path(path).read_bytes()).hexdigest(),path
