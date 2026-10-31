@@ -1,1 +1,5 @@
-{"browser_version": "2.2", "installer_status": "preparing"}
+{
+  "browser_version": "2.2",
+  "installer_status": "preparing",
+  "pages_owner_activation_confirmed": true
+}
