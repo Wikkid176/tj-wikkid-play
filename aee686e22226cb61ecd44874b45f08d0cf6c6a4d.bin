@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#030305">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Urban Legend">
+<link rel="manifest" href="app.webmanifest">
+<link rel="icon" href="icons/icon192.png">
+<link rel="apple-touch-icon" href="icons/icon192.png">
+<title>TJ WikkiD Urban Legend - Web Beta v2.2</title>
+<style>
+/* The game screen fills the height in landscape; the soft keys sit over the black side bars. Single dark look by design. */
+[hidden]{display:none!important}
+:root{--void:#030305;--bone:#e9e2cf;--crimson:#c4161c;--muted:#7a7f90;color-scheme:dark}
+html,body{height:100%;margin:0;background:var(--void);color:var(--bone);overflow:hidden;overscroll-behavior:none;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#screen{display:block;background:#000;outline:none}
+@media (orientation:portrait){#wrap{align-items:flex-start;padding-top:max(8px,env(safe-area-inset-top,0px))}}
+#boot{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:var(--void) center/cover no-repeat;padding:16px;text-align:center}
+#boot::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(3,3,5,.55),rgba(3,3,5,.85))}
+#boot>*{position:relative}
+#boot h1{font:700 clamp(26px,7vw,52px)/1 Impact,"Arial Narrow",sans-serif;letter-spacing:.06em;color:var(--crimson);margin:0;text-shadow:0 0 18px rgba(196,22,28,.45)}
+#boot p{margin:0;color:var(--muted);max-width:46ch;font-size:14px}
+#status{color:var(--bone)!important}
+#start{font:700 20px/1 Impact,"Arial Narrow",sans-serif;letter-spacing:.12em;background:var(--crimson);color:#fff;border:0;border-radius:6px;padding:16px 34px;min-height:52px}
+#start:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+#bar{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);font:700 13px/1 system-ui,sans-serif;letter-spacing:.2em;color:var(--muted);pointer-events:none}
+#touch{position:fixed;inset:0;pointer-events:none;z-index:2}
+#zone{position:absolute;left:0;top:18%;bottom:0;width:45%;pointer-events:auto}
+#stick{position:absolute;left:calc(22px + env(safe-area-inset-left,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));width:calc(132px * var(--k,1));height:calc(132px * var(--k,1));border-radius:50%;border:2px solid rgba(233,226,207,.28);background:rgba(10,12,20,.32);pointer-events:none;opacity:.75}
+#stick.live{opacity:1}
+#knob{position:absolute;left:50%;top:50%;width:44%;height:44%;margin:-22% 0 0 -22%;border-radius:50%;background:rgba(233,226,207,.35);border:2px solid rgba(233,226,207,.5)}
+.b{position:absolute;pointer-events:auto;border-radius:50%;border:2px solid rgba(233,226,207,.5);background:rgba(10,12,20,.42);color:var(--bone);font:700 13px Impact,"Arial Narrow",sans-serif;display:flex;align-items:center;justify-content:center;letter-spacing:.08em;touch-action:none}
+.b.on{background:rgba(196,22,28,.65);border-color:rgba(255,220,210,.8)}
+#pad{position:absolute;right:calc(10px + env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));width:212px;height:200px;pointer-events:none;transform:scale(var(--k,1));transform-origin:right bottom}
+#pad .b{width:76px;height:76px}
+#touch .sys{border-radius:10px;width:46px;height:38px;font-size:13px}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="screen" tabindex="0" aria-label="TJ WikkiD Urban Legend"></canvas></div>
+<div id="bar" hidden>LOADING</div>
+<div id="touch" hidden>
+  <div id="zone"><div id="stick"><div id="knob"></div></div></div>
+  <div id="pad">
+    <div class="b" data-k="punch" style="left:0;top:62px">PUNCH</div>
+    <div class="b" data-k="kick" style="right:0;top:62px">KICK</div>
+    <div class="b" data-k="jump" style="left:68px;bottom:0">JUMP</div>
+    <div class="b" data-k="rage" style="left:68px;top:0;width:66px;height:66px;margin-left:5px;border-color:rgba(196,22,28,.9)">RAGE</div>
+  </div>
+  <div class="b sys" data-k="start" style="top:calc(10px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))" aria-label="Pause">II</div>
+  <div class="b sys" data-k="back" style="top:calc(10px + env(safe-area-inset-top,0px));left:calc(12px + env(safe-area-inset-left,0px))" aria-label="Back">&#8592;</div>
+</div>
+<div id="boot" style="background-image:url(sheets/scr_title.jpg)">
+  <h1>T.J. WIKKID: URBAN LEGEND</h1>
+  <p id="status">Loading…</p>
+  <button id="start" type="button" hidden>PRESS START</button>
+  <p>Turn your phone sideways. Play with the on-screen buttons or connect a Bluetooth or USB controller; the buttons hide while a controller is in use.</p>
+  <p id="install">Add to Home Screen to install it like an app.</p>
+</div>
+<script src="host.js"></script>
+</body>
+</html>
