@@ -1,7 +1,8 @@
 {
   "browser_version": "2.3",
-  "installer_status": "preparing",
+  "installer_status": "published",
   "pages_owner_activation_confirmed": true,
   "social_preview": "social-preview-v2.3.jpg",
-  "game_source_commit": "31bf0028277dc66e02e26bccb2f137be816a99de"
+  "game_source_commit": "31bf0028277dc66e02e26bccb2f137be816a99de",
+  "installer_version": "2.3"
 }
