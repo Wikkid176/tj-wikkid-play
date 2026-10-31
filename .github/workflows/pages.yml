@@ -70,7 +70,17 @@ jobs:
                   data=r.read();assert r.status==200
               assert hashlib.sha256(data).hexdigest()==hashlib.sha256(Path(path).read_bytes()).hexdigest(),path
               checked[path]={'http':200,'sha256':hashlib.sha256(data).hexdigest()}
-          Path('pages-health.json').write_text(json.dumps({'live_url':base,'checked':checked},indent=2))
+          html=Path('index.html').read_text()
+          assert 'property="og:image"' in html and 'name="twitter:card"' in html
+          if Path('windows-download.json').exists():
+              release=json.loads(Path('windows-download.json').read_text())
+              assert release['url'] in html and 'aria-disabled="true"' not in html
+              req=urllib.request.Request(release['url'],method='HEAD')
+              with urllib.request.urlopen(req,timeout=120) as r:
+                  assert r.status==200
+                  assert int(r.headers['Content-Length'])==release['bytes']
+              checked['windows_installer']={'http':200,'bytes':release['bytes'],'sha256':release['sha256'],'url':release['url']}
+          Path('pages-health.json').write_text(json.dumps({'live_url':base,'checked':checked,'social_metadata':True},indent=2))
           PY
       - name: Record deployment status over Git
         if: always()

@@ -1,0 +1,12 @@
+{
+  "version": "2.3",
+  "url": "https://github.com/Wikkid176/tj-wikkid-play/releases/download/v2.3/TJ_WikkiD_Urban_Legend_Setup_v2.3.exe",
+  "bytes": 462801610,
+  "sha256": "86000f1078de4351132ec0200a6238541bb987998226a1272c39088aa623238b",
+  "offline_install": true,
+  "password_required": false,
+  "encrypted_asset_files": 374,
+  "game_source_commit": "31bf0028277dc66e02e26bccb2f137be816a99de",
+  "windows_native_validation_url": "https://github.com/Wikkid176/tj-wikkid-play/actions/runs/41238238477",
+  "checksum_url": "https://github.com/Wikkid176/tj-wikkid-play/releases/download/v2.3/SHA256SUMS.txt"
+}
