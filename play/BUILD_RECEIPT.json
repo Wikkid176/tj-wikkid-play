@@ -1,10 +1,10 @@
 {
-  "source_commit": "b6585d392709f98764efa868e5a41cb498bfcfb2",
-  "zip": "TJ_WikkiD_Urban_Legend_Web_Beta_v2.2.zip",
-  "zip_bytes": 250377010,
-  "zip_sha256": "d852a31e73ca83df3cc84684eb3a08295114a88b5b92fa9bd47452ec9d11899e",
+  "source_commit": "31bf0028277dc66e02e26bccb2f137be816a99de",
+  "zip": "TJ_WikkiD_Urban_Legend_Web_Beta_v2.3.zip",
+  "zip_bytes": 250377011,
+  "zip_sha256": "f4e257aed222ab8aacb00e4f6d4339afec0d6f6756e91e631da8241102253445",
   "files": {
-    "README.txt": "87db2e19f7a09f8a2f3cf75c83ceba30a863f2800acbcc38e7818d1601d1e39d",
+    "README.txt": "6c5c2b54ee58d6ee85c5f49e224ac0e612ecec6bc7093e75a3a35bb30b586df6",
     "album/01.mp3": "190a55fce4a6ee87d476e6f3dbdfe846919b35742a9e6e13bdb722944b1a0e3d",
     "album/02.mp3": "3c516814d08eb08ced7ecfdde7a43042ede3144b6feb7852596916676fa07caa",
     "album/03.mp3": "cd1fdfbb8a0c0ededb679d1cdf6db137af6240a95d4755a0121764b59e554404",
@@ -56,14 +56,14 @@
     "anim/lo/suit.png": "6e2d1ed8a6f551fcba10ca9f9c7fc78e9fa7168fade920390f4099cbacbb1382",
     "anim/lo/suit_alt.png": "33283e447c00c781f61f2fda38cc3e980f348aa1dc78492a847233920973c7bf",
     "app.webmanifest": "b5d4781ed92a165beb0a4abb4711609ffae550c7661ea5dec41ba78da2b971de",
-    "artifact.html": "3ba5c82bc39211c2e49172caff2ce90695c2dc85ee35c47d3869e84635eda2e0",
+    "artifact.html": "9a0e227c24890596a7861e6a50aa237513a43cba0d07b785a92e3448590fb84e",
     "assets.json": "fb7f6bdf8f59995d35312590b4fe8321c925dc9c6de40a2242662d99b3328612",
     "frame/tv.png": "838dd22f0bf403c7efbefa46a936ba01da1ed968766662e3074e792cc5a5691a",
     "game.wasm": "75ce2ae5c8a5c5c5bcd2321f8fb4e7c0f4d0fe277bc27c49d3c543f32f0e3852",
     "host.js": "ff734e911c6799e68b9870947e3d9d636a042ee498b1cc3424fad5c2afa17f09",
     "icons/icon192.png": "44c377ffb507637079a9256c577c869781c3e9081568bb5c3dc0fa6429da0336",
     "icons/icon512.png": "34eee293e2ef8bb15eb6684876d3e4ceedbed794b7905355f8d06f9be460ec11",
-    "index.html": "f5c3661369cc8bb0d7b4dc016f1eb2cb054180995de1705213f5efe174ce199b",
+    "index.html": "9333a8ccf531bf4ea15e5515d103aff5fefae78d2c367b5dcdae335fc0784d0c",
     "lo/band.png": "eb2562eeb83e06403ef14ff8615548de67e11275a8b803a2ae923d37a51286b2",
     "lo/banners.png": "82caf3d3cf321bee1c569de1fe4ab15f0d6fecafef5c7d00f620c2f0f9fb430c",
     "lo/biter.png": "295a0bd3f2dfd424569d3d9c9a60d195f4dc79daf71f20e6f1e0bc2a42a19ed5",
@@ -384,7 +384,7 @@
     "sheets/ui_speech.png": "09dca466cc2698c3ba78ead7707fb552d4742199a95ef861b84eb371f5658c3b",
     "sheets/vignette.png": "31de4792a4c5e94711be4fa0f7cf752b6e6eff589ef80dd890c615e580919d0e",
     "sheets/words.png": "c84634938df6b9026bb36ca927129771c0939965c0975fcfec39b20971eeccb5",
-    "sw.js": "73e5755d96838de98202545b7af3a5cddf3f2b0d58a00b5003c9e555fd09627d"
+    "sw.js": "cfc532e6aba6eb1e1ad184bc9e414d1e142f9bd7672cc7fb74a5ef932c9d5789"
   },
   "physical_phone_gpu_playtest": "pending",
   "live_hosted_url": null

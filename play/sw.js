@@ -1,5 +1,5 @@
 // Offline support: the game core is cached on install; art, sound and music are cached the first time they are used.
-const V = 'wk-v2.2', CORE = ['./', 'index.html', 'host.js', 'game.wasm', 'assets.json', 'app.webmanifest', 'icons/icon192.png'];
+const V = 'wk-v2.3', CORE = ['./', 'index.html', 'host.js', 'game.wasm', 'assets.json', 'app.webmanifest', 'icons/icon192.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('wk-') && k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

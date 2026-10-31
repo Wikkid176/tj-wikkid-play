@@ -1,4 +1,4 @@
-TJ WikkiD Urban Legend - Browser version (PC Beta v2.2)
+TJ WikkiD Urban Legend - Browser version (PC Beta v2.3)
 (c) 2026 T.J. WikkiD. All rights reserved. Game design and concept by A. Edwards.
 
 The PC version for desktop browsers, phones and tablets: the same game, HD art, story, modes, unlocks and album, with keyboard,
@@ -30,7 +30,7 @@ OPTIONS
   Everything else matches the PC version, including hidden modes and the Urban Legend album unlock.
 
 BETA v2.2 PERFORMANCE AND HOSTING
-  Built from the same PC game sources as Windows v2.2. All 52 enemy/boss poses
+  Built from the same PC game sources as Windows v2.3. All 52 enemy/boss poses
   remain. Browser HD uses the existing 2x assets; Windows keeps its native 4x art.
   Lossless atlas packing removes unused padding, retaining exact browser pixels.
   Canvas backing size is bounded to 1920x1080 on desktop and 1280x720 on touch
@@ -54,5 +54,5 @@ BETA v2.2 PERFORMANCE AND HOSTING
   Safari and physical GPU performance remain to be tested; 60+ FPS is a target,
   not a hardware certification. Keep browser hardware acceleration enabled.
 
-Build source commit: b6585d392709f98764efa868e5a41cb498bfcfb2
+Build source commit: 31bf0028277dc66e02e26bccb2f137be816a99de
 Physical phone/GPU acceptance remains pending.
