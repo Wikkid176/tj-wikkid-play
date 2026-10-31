@@ -1,0 +1,44 @@
+{
+  "source_commit": "28c78ee0c25a0aadf7e2b008d37325b3222fe7f2",
+  "run_url": "https://github.com/Wikkid176/tj-wikkid-play/actions/runs/41238675936",
+  "enable": "success",
+  "deploy": "success",
+  "health_check": "success",
+  "url": "https://wikkid176.github.io/tj-wikkid-play/",
+  "pages-enablement.json": {
+    "success": true,
+    "response": "{\"url\":\"https://api.github.com/repos/Wikkid176/tj-wikkid-play/pages\",\"status\":null,\"cname\":null,\"custom_404\":false,\"html_url\":\"https://wikkid176.github.io/tj-wikkid-play/\",\"build_type\":\"workflow\",\"source\":{\"branch\":\"main\",\"path\":\"/\"},\"public\":true,\"protected_domain_state\":null,\"pending_domain_unverified_at\":null,\"https_enforced\":true}"
+  },
+  "pages-health.json": {
+    "live_url": "https://wikkid176.github.io/tj-wikkid-play/",
+    "checked": {
+      "index.html": {
+        "http": 200,
+        "sha256": "db04839ca348d08310a275d425567b93b160c6c84c9ab3834bcbfb76cffd52c7"
+      },
+      "play/index.html": {
+        "http": 200,
+        "sha256": "9333a8ccf531bf4ea15e5515d103aff5fefae78d2c367b5dcdae335fc0784d0c"
+      },
+      "play/game.wasm": {
+        "http": 200,
+        "sha256": "75ce2ae5c8a5c5c5bcd2321f8fb4e7c0f4d0fe277bc27c49d3c543f32f0e3852"
+      },
+      "play/assets.json": {
+        "http": 200,
+        "sha256": "fb7f6bdf8f59995d35312590b4fe8321c925dc9c6de40a2242662d99b3328612"
+      },
+      "social-preview-v2.3.jpg": {
+        "http": 200,
+        "sha256": "8d08f28a19fc0b8058daadf7f7e22de2f260129c2d040cc4105ac7314acf1f90"
+      },
+      "windows_installer": {
+        "http": 200,
+        "bytes": 462801610,
+        "sha256": "86000f1078de4351132ec0200a6238541bb987998226a1272c39088aa623238b",
+        "url": "https://github.com/Wikkid176/tj-wikkid-play/releases/download/v2.3/TJ_WikkiD_Urban_Legend_Setup_v2.3.exe"
+      }
+    },
+    "social_metadata": true
+  }
+}
